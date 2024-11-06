@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>车主信息</title>
+    <style>
+        /* 全局样式 */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(145deg, #72c6f4, #4a90e2);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 460px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .car-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        .content {
+            padding: 20px 25px;
+            box-sizing: border-box; /* 保证内容宽度包含内边距 */
+        }
+
+        .info {
+            margin: 15px 0;
+            text-align: left;
+        }
+
+        .info label {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .info span {
+            font-size: 18px;
+            color: #34495e;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* 按钮容器样式 */
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px; /* 按钮之间的间距 */
+            margin-top: 20px;
+        }
+
+        /* 按钮样式 */
+        .btn {
+            width: 60%;
+            max-width: 280px;
+            padding: 16px;
+            background-color: #3498db;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+            transform: translateY(-5px);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        /* 响应式样式 */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                max-width: 100%;
+                width: 100%;
+            }
+            .content {
+                padding: 15px;
+            }
+            .info label, .info span {
+                font-size: 16px;
+            }
+            .btn {
+                font-size: 16px;
+                padding: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 车辆图像，位于卡片顶部，形成视觉一体感 -->
+        <img src="car.png" alt="车辆图片" class="car-image">
+
+        <!-- 信息内容部分 -->
+        <div class="content">
+            <div class="info">
+                <label for="licensePlate">车牌号:</label>
+                <span id="licensePlate">闽D DD2419</span>
+            </div>
+
+            <div class="info">
+                <label for="customText">抱歉:</label>
+                <span id="customText">一个电话马上就滚</span>
+            </div>
+
+            <!-- 按钮容器 -->
+            <div class="button-container">
+                <a href="tel:15080000742" class="btn">拨打电话1</a>
+                <a href="tel:15710639057" class="btn">拨打电话2</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
