@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>车主信息</title>
+    <style>
+        /* 基本样式 */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .info {
+            margin: 15px 0;
+        }
+        .info label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .info span {
+            color: #555;
+            word-wrap: break-word;
+            display: block;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 16px;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 15px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            .info {
+                margin: 10px 0;
+            }
+            .btn {
+                font-size: 14px;
+                padding: 12px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>车主信息</h2>
+
+        <div class="info">
+            <label for="licensePlate">车牌号:</label>
+            <span id="licensePlate">粤A12345</span>
+        </div>
+
+        <div class="info">
+            <label for="phoneNumber">车主电话:</label>
+            <span id="phoneNumber">13812345678</span>
+        </div>
+
+        <div class="info">
+            <label for="customText">自定义文字:</label>
+            <span id="customText">请在需要时与车主联系。</span>
+        </div>
+
+        <a href="tel:13812345678" class="btn">一键拨打电话</a>
+    </div>
+
+</body>
+</html>
